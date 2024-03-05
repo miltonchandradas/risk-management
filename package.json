@@ -10,9 +10,13 @@
     "express": "^4"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^1"
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.5"
   },
   "scripts": {
     "start": "cds-serve"
-  }
+  },
+  "sapux": [
+    "app/risk-management"
+  ]
 }
