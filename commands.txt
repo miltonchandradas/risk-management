@@ -18,10 +18,9 @@ cf deploy mta_archives/risk-management_1.0.0.mtar
 
 CLEANUP COMMANDS
 ---------------------------------------------------------------
-cf delete -r risk-management
-cf delete -r risk-management-approuter
-cf delete -r risk-management-db-deployer
-cf delete -r risk-management-srv
+cf delete -r -f risk-management
+cf delete -r -f risk-management-db-deployer
+cf delete -r -f risk-management-srv
 cf delete-service risk-management-db -f
 cf delete-service risk-management-auth -f
 cf delete-service risk-management-destination -f

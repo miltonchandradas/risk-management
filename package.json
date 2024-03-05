@@ -11,6 +11,9 @@
     "@sap-cloud-sdk/resilience": "^3.12.0",
     "@sap/cds": "^7",
     "@sap/cds-dk": "^7.7.1",
+    "@sap/cds-hana": "^2.0.0",
+    "@sap/xsenv": "^4.2.0",
+    "@sap/xssec": "^3.6.1",
     "express": "^4",
     "passport": "^0.7.0"
   },
@@ -32,6 +35,10 @@
         "credentials": {
           "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/"
         }
+      },
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
       }
     }
   }
