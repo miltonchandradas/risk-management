@@ -30,6 +30,7 @@ module.exports = cds.service.impl(async function () {
   // With this we can loop through the received data set and manipulate the single risk entries
   this.after("READ", Risks, (data) => {
     // Convert to array, if it's only a single risk, so that the code won't break here
+    // Testing CI CD pipeline...
     const risks = Array.isArray(data) ? data : [data];
 
     // Looping through the array of risks to set the virtual field 'criticality' that you defined in the schema
