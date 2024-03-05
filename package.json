@@ -6,6 +6,9 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^3.12.0",
+    "@sap-cloud-sdk/http-client": "^3.12.0",
+    "@sap-cloud-sdk/resilience": "^3.12.0",
     "@sap/cds": "^7",
     "@sap/cds-dk": "^7.7.1",
     "express": "^4"
@@ -19,5 +22,16 @@
   },
   "sapux": [
     "app/risk-management"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata",
+        "model": "srv/external/API_BUSINESS_PARTNER",
+        "credentials": {
+          "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/"
+        }
+      }
+    }
+  }
 }
