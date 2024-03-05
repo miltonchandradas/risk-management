@@ -1,1 +1,25 @@
-{}
+{
+    "requires": {
+      "auth": {
+        "users": {
+          "riskviewer": {
+            "password": "initial",
+            "id": "riskviewer",
+            "userAttributes": {
+              "email": "risk.viewer@tester.sap.com"
+            },
+            "roles": ["RiskViewer"]
+          },
+          "riskmanager": {
+            "password": "initial",
+            "id": "riskmanager",
+            "userAttributes": {
+              "email": "risk.manager@tester.sap.com"
+            },
+            "roles": ["RiskManager"]
+          }
+        }
+      }
+    }
+  }
+  
