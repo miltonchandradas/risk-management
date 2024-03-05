@@ -1,0 +1,15 @@
+
+### GET Service Document
+GET http://localhost:4004/odata/v4/service/risk?$format=json
+
+
+### GET Metadata
+GET http://localhost:4004/odata/v4/service/risk/$metadata
+
+### GET Risks
+GET http://localhost:4004/odata/v4/service/risk/Risks
+
+
+### GET Mitigations
+GET http://localhost:4004/odata/v4/service/risk/Mitigations
+
