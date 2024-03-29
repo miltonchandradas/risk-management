@@ -1,0 +1,11 @@
+GET Risks?$count=true&$filter=(IsActiveEntity%20eq%20false%20or%20SiblingEntity/IsActiveEntity%20eq%20null)&$select=HasActiveEntity,ID,IsActiveEntity,PrioCriticality,criticality,impact,owner,prio_code,title&$expand=bp($select=BusinessPartner,FullName),miti($select=ID,IsActiveEntity,descr),prio($select=code,descr)&$skip=0&$top=30
+
+Risks
+    ?$count=true&$filter=(IsActiveEntity eq false or SiblingEntity/IsActiveEntity eq null)
+    &$select=HasActiveEntity,ID,IsActiveEntity,PrioCriticality,criticality,impact,owner,prio_code,title
+    &$expand=bp($select=BusinessPartner,FullName),miti($select=ID,IsActiveEntity,descr),prio($select=code,descr)
+    &$skip=0&$top=30
+
+
+Risks
+    &$expand=bp($select=BusinessPartner,FullName),miti($select=ID,IsActiveEntity,descr),prio($select=code,descr)
