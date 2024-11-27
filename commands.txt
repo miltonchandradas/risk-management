@@ -33,3 +33,9 @@ git merge origin/<branch name>
 
 git checkout <branch name> && git rebase main
 git push -u -f origin <branch name>
+
+
+GET Risks?$count=true&$filter=(IsActiveEntity eq false or SiblingEntity/IsActiveEntity eq null)&$select=HasActiveEntity,ID,IsActiveEntity,PrioCriticality,criticality,impact,owner,prio_code,title&$expand=bp($select=BusinessPartner,FullName),miti($select=ID,IsActiveEntity,descr),prio($select=code,descr)&$skip=0&$top=30 
+
+
+GET Risks?$expand=bp($select=BusinessPartner,FullName),miti($select=ID,IsActiveEntity,descr),prio($select=code,descr)
