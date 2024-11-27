@@ -25,6 +25,14 @@ cf delete-service risk-management-db -f
 cf delete-service risk-management-auth -f
 cf delete-service risk-management-destination -f
 
+AUTOSCALER COMMANDS
+---------------------------------------------------------------
+cf create-service autoscaler standard my-autoscaler
+cf update-service my-autoscaler -c autoscaler-policy.json
+cf bind-service risk-management-srv my-autoscaler
+
+
+
 GITHUB COMMANDS
 ---------------------------------------------------------------
 git checkout main
